@@ -61,5 +61,10 @@ typings/
 .next
 
 .idea
-
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/pawjs-portfolio.iml
+.idea/workspace.xml
+package-lock.json
 dist
