@@ -1,0 +1,337 @@
+@import "../../../resources/css/scss/functions";
+@import "../../../resources/css/scss/variables";
+@import "../../../resources/css/scss/mixins";
+.banner-section {
+  height: 100vh;
+  line-height: 0;
+  .bg-img {
+    @include img-inbg;
+    line-height: 1.5;
+    &:before {
+      content: '';
+      background: linear-gradient(45deg, #131b51 0%, #e8d4e6 100%);
+      opacity: .6;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      @include transform(translate(0, -50%));
+      left: 0;
+      padding-left: 5%;
+    }
+  }
+  .scroll-down {
+    text-align: center;
+    width: 2.125rem;
+    height: 3.625rem;
+    display: inline-block;
+    border-radius: 1.25rem;
+    border: 3px solid $white;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    @include transform(translate(-50%, 0));
+    margin-bottom: 2rem;
+    span {
+      height: .625rem;
+      width: .25rem;
+      background-color: $white;
+      display: inline-block;
+      border-radius: 3px;
+      @include animation (fadebounce 3s infinite);
+    }
+  }
+  .person-name {
+    font-size: 5rem;
+  }
+}
+
+.about {
+  .social-icon {
+    @include size(2.5rem);
+    border-radius: 50%;
+    background-color: darken(theme-color("primary"), 5%);
+    @include transition(.2s linear all);
+    color: $white;
+    @include hover-focus-active {
+      background-color: darken(theme-color("primary"), 1%);
+    }
+  }
+  .icons {
+    font-size: 2rem;
+  }
+  .desc {
+    p {
+      line-height: 1.7;
+    }
+  }
+}
+
+.service {
+  .service-icon {
+    font-size: 2.5rem;
+  }
+  .contact-btn {
+    height: .3125rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include transition(.3s all ease-in-out);
+    span {
+      @include transition(.9s all ease-in-out);
+      line-height: 6.25rem;
+    }
+  }
+  .service-block {
+    position: relative;
+    overflow: hidden;
+    p {
+      margin-bottom: 3.875rem;
+      font-size: .875rem;
+    }
+    &:hover {
+      .contact-btn {
+        height: 2.5rem;
+        span {
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+.resume {
+  .resume-icon {
+    font-size: 2rem;
+  }
+}
+
+.skill {
+  .skill-content {
+    border-left: 3px solid theme-color("primary");
+    font-size: .875rem;
+  }
+  .progress-bar {
+    background-color: $gray-200;
+    .bar {
+      position: relative;
+      @include transition(.2s linear all);
+      @include animation(skillbar 3s linear forwards);
+      span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: -1.875rem;
+        @include animation(barvalue 1s linear forwards);
+        animation-delay: 3s;
+        opacity: 0;
+      }
+    }
+  }
+  .skill-chart {
+    border-top: 1px solid $gray-600;
+    .expand {
+      p {
+        font-size: .875rem;
+      }
+      &:before {
+        display: block;
+        position: relative;
+        content: "";
+        width: 1px;
+        height: 10px;
+        background-color: $gray-600;
+        margin: auto;
+      }
+      &.expand-left {
+        &:before {
+          margin-left: 0;
+        }
+      }
+      &.expand-right {
+        &:before {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .circular-progress-bar {
+    position: relative;
+    display: inline-block;
+    &:after {
+      position: absolute;
+      font-weight: 600;
+      text-align: center;
+      color: $gray-500;
+      font-size: 1.5rem;
+      width: 100%;
+      left: 0;
+      @include transform(translate(0, -50%));
+      content: attr(data-percent) '%';
+      top: 50%;
+    }
+    .circle {
+      @include transform(rotate(-90deg));
+      .progress-meter,
+      .progress-value {
+        fill: none;
+      }
+      .progress-meter {
+        stroke: $gray-200;
+      }
+      .progress-value {
+        stroke: theme-color("primary");
+        stroke-linecap: round;
+        @include transition(.3s all linear);
+        @include animation(lefttoright 3s linear forwards);
+      }
+    }
+  }
+}
+
+#portfolio {
+  .button {
+    color: $gray-700;
+    font-size: 1.2rem;
+    font-weight: 600;
+    &.is-checked {
+      color: theme-color("primary");
+    }
+    @include hover-focus-active {
+      text-decoration: none;
+      box-shadow: none;
+    }
+  }
+  .portfolio-item {
+    .item {
+      -webkit-perspective: 1700px;
+      -moz-perspective: 1700px;
+      perspective: 1700px;
+      -webkit-perspective-origin: 0 50%;
+      -moz-perspective-origin: 0 50%;
+      perspective-origin: 0 50%;
+    }
+    .item-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      background-color: $gray-700;
+      color: theme-color("primary");
+      height: 100%;
+      width: 50%;
+      opacity: 0;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      transform-origin: 0 0;
+      @include transform(rotateY(-90deg));
+      @include transition(transform .4s, opacity .1s .3s);
+      a {
+        font-size: 1rem;
+      }
+      span {
+        color: theme-color("primary");
+        font-size: .875rem;
+        text-transform: capitalize;
+      }
+      .item-link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0 1.25rem 1.25rem 0;
+      }
+    }
+    .item-hover {
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      .item-inner {
+        overflow: hidden;
+      }
+      img {
+        @include transition(transform .4s);
+      }
+      &:hover {
+        img {
+          @include transform(translateX(25%));
+        }
+        .item-info {
+          opacity: 1;
+          @include transform(rotateY(0deg));
+          @include transition(transform .4s, opacity .1s);
+        }
+      }
+    }
+    .small-icon {
+      background-color: theme-color("primary");
+      span {
+        color: $white;
+      }
+      @include hover-focus-active {
+        background-color: $white;
+        span {
+          color: theme-color("primary");
+        }
+      }
+    }
+  }
+}
+
+@include keyframes(fadebounce) {
+  0% {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+  50% {
+    @include transform(translateY(1.5625rem));
+    opacity: 1;
+  }
+  100% {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}
+
+@include keyframes(lefttoright) {
+  0% {
+    stroke-dashoffset: 446.106;
+  }
+}
+
+@include keyframes(skillbar) {
+  0% {
+    width: 0%;
+  }
+}
+
+@include keyframes(barvalue) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .banner-section {
+    padding-top: 3rem;
+    .person-name {
+      font-size: 2.5rem;
+    }
+    .banner-title,
+    .typing-text {
+      font-size: 1.5rem;
+    }
+  }
+}

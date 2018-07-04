@@ -2,6 +2,6 @@ export default [
   {
     path: "/",
     exact: true,
-    component: import("../app/components/test"),
+    component: import("../app/components/home/home"),
   },
 ];

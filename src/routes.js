@@ -1,11 +1,11 @@
-import TestRoutes from "./pages/test";
+import HomeRoute from "./pages/home";
 
 export default class Routes {
   
   apply(routeHandler) {
   
     const routes = [
-      ...TestRoutes
+      ...HomeRoute
     ];
     
     routeHandler.hooks.initRoutes.tapPromise("AppRoutes", async () => {

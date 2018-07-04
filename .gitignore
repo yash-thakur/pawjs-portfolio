@@ -68,3 +68,5 @@ typings/
 .idea/workspace.xml
 package-lock.json
 dist
+
+*.DS_Store
