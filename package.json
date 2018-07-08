@@ -28,6 +28,7 @@
     "classnames": "^2.2.6"
   },
   "devDependencies": {
+    "@pawjs/image-optimizer": "^0.8.7",
     "@pawjs/pawjs": "^2.0.0"
   }
 }

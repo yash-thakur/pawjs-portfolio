@@ -7,140 +7,151 @@ import * as styles from "./home.scss";
 export default class Resume extends Component {
   render() {
     return(
-      <div id="resume" className={classNames(styles["resume"], "py-5 px-md-5 px-3")}>
+      <div className={classNames(styles["resume"], "py-md-5 px-xl-5 px-md-3 p-3")}>
         <div className="bg-primary py-2 px-4 d-inline-block text-white mb-3">My Work Experience</div>
         <h2>Resume</h2>
         <div className="py-4">
           <h3>Experience :</h3>
-          <div className="row py-4">
-            <div className="col-md-4 py-1">
-              <div className="row">
-                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2">
+          <div className="row py-4 mx-0">
+            <div className="col-md-4 py-1 px-0">
+              <div className="row mx-0">
+                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2 px-0">
                   <div className={styles["resume-icon"]}>
-                    <span className="text-gray-light ti-ruler-pencil"/>
+                    <span className="text-gray-light fa fa-briefcase"/>
                   </div>
                 </div>
-                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10">
+                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10 pl-0">
                   <h3 className="text-primary">
-                    Website Solutions Pvt. Ltd
+                    Atyantik Technologies Pvt. Ltd
                   </h3>
-                  <span className="h5 text-gray-light font-weight-medium">2013 to present</span>
+                  <span className="h5 text-gray-light font-weight-medium">March, 2017 to Present</span>
                 </div>
               </div>
             </div>
-            <div className="col-md-8 py-1">
+            <div className="col-md-8 py-1 px-0">
+              <h3>Software Engineer</h3>
+              <p className="text-gray-light"></p>
+            </div>
+          </div>
+          <div className="row py-4 mx-0">
+            <div className="col-md-4 py-1 px-0">
+              <div className="row mx-0">
+                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2 px-0">
+                  <div className={styles["resume-icon"]}>
+                    <span className="text-gray-light fa fa-briefcase"/>
+                  </div>
+                </div>
+                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10 pl-0">
+                  <h3 className="text-primary">
+                    Freelancing
+                  </h3>
+                  <span className="h5 text-gray-light font-weight-medium">
+									2015 to present
+								</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-8 py-1 px-0">
               <h3>Front-End Development</h3>
-              <p className="text-gray-light">Quis nostrud exercitation ullamco laboris nisi ut aliquip exea. commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum.</p>
+              <p className="text-gray-light"></p>
             </div>
           </div>
-          <div className="row py-4">
-            <div className="col-md-4 py-1">
-              <div className="row">
-                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2">
+          <div className="row py-4 mx-0">
+            <div className="col-md-4 py-1 px-0">
+              <div className="row mx-0">
+                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2 px-0">
                   <div className={styles["resume-icon"]}>
-                    <span className="text-gray-light ti-bookmark-alt"/>
+                    <span className="text-gray-light fa fa-briefcase"/>
                   </div>
                 </div>
-                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10">
+                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10 pl-0">
                   <h3 className="text-primary">
-                    Global Solutions
+                    Milople
                   </h3>
                   <span className="h5 text-gray-light font-weight-medium">
-									2010 to 2013
+									Jan- Apr, 2015
 								</span>
                 </div>
               </div>
             </div>
-            <div className="col-md-8 py-1">
-              <h3>UI/UX Design</h3>
-              <p className="text-gray-light">Ut enim ad minim niam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip exea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia deserunt mollit anim id est laborum.</p>
+            <div className="col-md-8 py-1 px-0">
+              <h3>Junior Developer</h3>
+              <p className="text-gray-light">Worked at Milople an E-commerce outsourcing company.</p>
             </div>
           </div>
-          <div className="row py-4">
-            <div className="col-md-4 py-1">
-              <div className="row">
-                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2">
+          <div className="row py-4 mx-0">
+            <div className="col-md-4 py-1 px-0">
+              <div className="row mx-0">
+                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2 px-0">
                   <div className={styles["resume-icon"]}>
-                    <span className="text-gray-light ti-calendar"/>
+                    <span className="text-gray-light fa fa-briefcase"/>
                   </div>
                 </div>
-                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10">
+                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10 pl-0">
                   <h3 className="text-primary">
-                    Template Agency
+                    BSNL ( Bharat Sanchar Nigam Ltd. )
                   </h3>
                   <span className="h5 text-gray-light font-weight-medium">
-									2009 to 2010
+									2014
 								</span>
                 </div>
               </div>
             </div>
-            <div className="col-md-8 py-1">
-              <h3>Website production</h3>
-              <p className="text-gray-light">Commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim niam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip exea.</p>
+            <div className="col-md-8 py-1 px-0">
+              <h3>Junior Intern</h3>
+              <p className="text-gray-light">
+                Interned as a <strong>Junior Intern</strong> at India’s largest telecom company BSNL (Bharat Sanchar Nigam Ltd.),
+                which has exposed me to the best of wireless and Industry standards and practices.
+              </p>
             </div>
           </div>
         </div>
         <div className="py-4">
           <h3>Education:</h3>
-          <div className="row py-4">
-            <div className="col-md-4 py-1">
-              <div className="row">
-                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2">
+          <div className="row py-4 mx-0">
+            <div className="col-md-4 py-1 px-0">
+              <div className="row mx-0">
+                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2 px-0">
                   <div className={styles["resume-icon"]}>
-                    <span className="text-gray-light ti-crown"/>
+                    <span className="text-gray-light fa fa-graduation-cap"/>
                   </div>
                 </div>
-                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10">
+                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10 pl-0">
                   <h3 className="text-primary">
-                    University of London
+                    Parul University
                   </h3>
                   <span className="h5 text-gray-light font-weight-medium">
-									2008 to 2009
+									2015 to 2017
 								</span>
                 </div>
               </div>
             </div>
-            <div className="col-md-8 py-1">
-              <h3>Computer science</h3>
-              <p className="text-gray-light">Sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad
-                minim niam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea. commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident,</p>
+            <div className="col-md-8 py-1 px-0">
+              <h3>M.Tech. in Computer Science & Engineering</h3>
+              <p className="text-gray-light"></p>
             </div>
           </div>
-          <div className="row py-4">
-            <div className="col-md-4 py-1">
-              <div className="row">
-                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2">
+          <div className="row py-4 mx-0">
+            <div className="col-md-4 py-1 px-0">
+              <div className="row mx-0">
+                <div className="col-xl-2 col-lg-3 col-md-12 col-sm-1 col-2 px-0">
                   <div className={styles["resume-icon"]}>
-                    <span className="text-gray-light ti-thumb-up"/>
+                    <span className="text-gray-light fa fa-university"/>
                   </div>
                 </div>
-                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10">
+                <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10 pl-0">
                   <h3 className="text-primary">
-                    Institue of art & Design
+                    Gujarat Technological University
                   </h3>
                   <span className="h5 text-gray-light font-weight-medium">
-									2007 to 2009
+									2011 to 2015
 								</span>
                 </div>
               </div>
             </div>
-            <div className="col-md-8 py-1">
-              <h3>Software engineering</h3>
-              <p className="text-gray-light">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum. Ut enim ad minim niam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip exea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.</p>
+            <div className="col-md-8 py-1 px-0">
+              <h3>B.E. in Computer Science & Engineering</h3>
+              <p className="text-gray-light"></p>
             </div>
           </div>
         </div>

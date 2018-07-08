@@ -6,11 +6,11 @@ import * as styles from "./home.scss";
 export default class Services extends Component {
   render() {
     return(
-      <div className={classNames(styles["service"], "py-5 px-md-5 px-3")}>
+      <div className={classNames(styles["service"], "py-md-5 px-xl-5 px-md-3 p-3")}>
         <div className="bg-primary py-2 px-4 d-inline-block text-white mb-3">What i can do better</div>
         <h2>Services</h2>
-        <div className="row my-4">
-          <div className="col-lg-3 col-md-6 py-2">
+        <div className="row my-4 mx-0">
+          <div className="col-xl-3 col-lg-6 col-sm-6 py-2">
             <div className={styles["service-block"]}>
               <span className={classNames(styles["service-icon"], "text-gray-light ti-desktop")}/>
               <h4 className="my-4">Tranding Design</h4>
@@ -25,7 +25,7 @@ export default class Services extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 py-2">
+          <div className="col-xl-3 col-lg-6 col-sm-6 py-2">
             <div className={styles["service-block"]}>
               <span className={classNames(styles["service-icon"], "text-gray-light ti-slice")}/>
               <h4 className="my-4">Clear Code</h4>
@@ -40,7 +40,7 @@ export default class Services extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 py-2">
+          <div className="col-xl-3 col-lg-6 col-sm-6 py-2">
             <div className={styles["service-block"]}>
               <span className={classNames(styles["service-icon"], "text-gray-light ti-brush-alt")}/>
               <h4 className="my-4">App Design</h4>
@@ -55,7 +55,7 @@ export default class Services extends Component {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 py-2">
+          <div className="col-xl-3 col-lg-6 col-sm-6 py-2">
             <div className={styles["service-block"]}>
               <span className={classNames(styles["service-icon"], "text-gray-light ti-layout-media-center")}/>
               <h4 className="my-4">UI/UX Design</h4>

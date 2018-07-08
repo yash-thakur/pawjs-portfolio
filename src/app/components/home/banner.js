@@ -10,7 +10,7 @@ import BannerImg from "../../../resources/images/bg.jpg";
 export default class HomeBanner extends Component {
   render() {
     return(
-      <div id="home" className={styles["banner-section"]}>
+      <div className={styles["banner-section"]}>
         <div className={styles["bg-img"]} style={{backgroundImage: `url(${BannerImg})`}}>
           <div className={styles["content"]}>
             <h1 className={classNames(styles["banner-title"], "h2 text-white")}>Hello I'm
