@@ -1,5 +1,6 @@
 import HomeRoute from "./pages/home";
 import BlogRoute from "./pages/blog";
+import PortfoliosRoute from "./pages/portfolios";
 
 export default class Routes {
   
@@ -7,7 +8,8 @@ export default class Routes {
   
     const routes = [
       ...HomeRoute,
-      ...BlogRoute
+      ...BlogRoute,
+      ...PortfoliosRoute
     ];
     
     routeHandler.hooks.initRoutes.tapPromise("AppRoutes", async () => {

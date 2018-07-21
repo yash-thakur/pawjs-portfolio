@@ -89,7 +89,7 @@ export default class Resume extends Component {
                 </div>
                 <div className="resume-name col-xl-10 col-lg-9 col-md-12 col-sm-11 col-10 pl-0">
                   <h3 className="text-primary">
-                    BSNL ( Bharat Sanchar Nigam Ltd. )
+                    BSNL (Bharat Sanchar Nigam Ltd.)
                   </h3>
                   <span className="h5 text-gray-light font-weight-medium">
 									2014

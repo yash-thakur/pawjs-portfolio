@@ -14,7 +14,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className={classNames(styles["site-header"], "col-md-3 col-xl-2")}>
-        <div className={classNames(styles["header-bar"], "d-flex align-items-center d-md-none")}>
+        <div className={classNames(styles["header-bar"], "d-flex align-items-center d-lg-none")}>
           <h4 className="font-weight-bold mb-0">
             <a href="#" className="text-uppercase text-white">{_.get(config, "name", "")}</a>
           </h4>
@@ -31,18 +31,18 @@ export default class Header extends Component {
             </svg>
           </button>
         </div>
-        <div className={classNames(styles["left-sidebar"], "bg-dark col-md-3 col-xl-2 px-0")}>
+        <div className={classNames(styles["left-sidebar"], "bg-dark col-lg-3 col-xl-2 px-0")}>
           <nav>
-            <div className="p-4 text-center">
+            <div className="p-3 text-center">
               <a href="#"className={styles["logo"]}>
                 <img id="logo_img" src={Logo} alt="LOGO" className="mw-100"/>
               </a>
-              <p className={classNames(styles["site-description"], "mt-2")}>{_.get(config, "motto", "")}</p>
             </div>
+            <p className={classNames(styles["site-description"], "mt-2")}>{_.get(config, "motto", "")}</p>
             <div className={styles["menu-links"]}>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled mb-0">
                 <li>
-                  <a href="#home" className={classNames(styles["active"], styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Home</a>
+                  <a href="#home" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Home</a>
                 </li>
                 <li>
                   <a href="#about" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>About</a>

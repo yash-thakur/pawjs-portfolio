@@ -1,7 +1,12 @@
 export default [
   {
     path: "/blog",
-    exact: true,
     component: import("../app/components/blog/index"),
+    exact: true
   },
+  {
+    path: "/blog/temperature-sensor-raspberrypi/",
+    exact: true,
+    component: import ("../app/components/blogs/temperature-sensor-raspberrypi")
+  }
 ];

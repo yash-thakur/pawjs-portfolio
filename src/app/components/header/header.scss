@@ -8,7 +8,7 @@ $left-sidebar-width: 14.375rem;
     justify-content: center;
     align-items: center;
     text-align: center;
-    @include size(8rem);
+    @include size(12rem);
     background-color: theme-color('primary');
     color: $white;
   }
