@@ -11,14 +11,39 @@ import * as styles from "./header.scss";
 import Logo from "../../../resources/images/logo.png";
 
 export default class Header extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobileMenuOpen: false
+    }
+  }
+  
+  toggleMenu(e) {
+    if(e && e.preventDefault) {
+      e.preventDefault();
+    }
+    this.setState({
+      isMobileMenuOpen: !this.state.isMobileMenuOpen
+    });
+  }
   render() {
     return (
-      <header className={classNames(styles["site-header"], "col-md-3 col-xl-2")}>
+      <header
+        className={classNames(
+          styles["site-header"],
+          this.state.isMobileMenuOpen ? styles["open"] : "",
+          "col-md-3 col-xl-2"
+        )}>
         <div className={classNames(styles["header-bar"], "d-flex align-items-center d-lg-none")}>
           <h4 className="font-weight-bold mb-0">
             <a href="#" className="text-uppercase text-white">{_.get(config, "name", "")}</a>
           </h4>
-          <button className={classNames(styles["toggle-btn"], "btn btn-link p-0")} type="button">
+          <button
+            className={classNames(styles["toggle-btn"], "btn btn-link p-0")}
+            type="button"
+            onClick={e => this.toggleMenu(e)}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
               <title>Menu</title>
               <path
