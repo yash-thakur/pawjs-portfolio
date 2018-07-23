@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "A portfolio using ReactJS, HTML5",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pawjs start:dev",
-    "build": "pawjs build:prod"
+    "start": "pawjs --env=development start",
+    "build": "pawjs --env=production build"
   },
   "repository": {
     "type": "git",
