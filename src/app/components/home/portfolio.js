@@ -1,5 +1,9 @@
 import React, {Component} from "react";
+import _ from "lodash";
+import {Link} from "react-router-dom";
 import classNames from "classnames";
+
+import portfoliosList from "../portfolios/portfolios-list";
 
 //Custom CSS
 import * as styles from "./home.scss";
@@ -32,29 +36,36 @@ export default class Portfolio extends Component {
               </button>
             </div>
             <div className="grid row my-4 mx-0">
-              <div className="col-xl-3 col-lg-6 col-md-4 col-sm-6 p-sm-2 p-3 element-item web-design graphic-design">
-                <div className={styles["portfolio-item"]}>
-                  <div className={styles["item"]}>
-                    <div className={styles["item-hover"]}>
-                      <div className={styles["item-inner"]}>
-                        <img className="mw-100" src={Port} alt=""/>
-                      </div>
-                      <div className={styles["item-info"]}>
-                        <a href="#" className="text-white text-capitalize">Work item one</a>
-                        <span className="text-primary d-block">by Sam Martin</span>
-                        <div className="item-link">
-                          <a className="small-icon btn" href="images/portfolio/01.jpg">
-                            <span className="ti-plus"/>
-                          </a>
-                          <a className="small-icon btn" href="portfolio-single.html">
-                            <span className="ti-link"/>
-                          </a>
+              {
+                _.map(portfoliosList, (portfolio, key) => {
+                  let img = _.get(portfolio, "img", "");
+                  return (
+                    <div key={key} className="col-xl-3 col-lg-6 col-md-4 col-sm-6 p-sm-2 p-3 element-item web-design graphic-design">
+                      <div className={styles["portfolio-item"]}>
+                        <div className={styles["item"]}>
+                          <div className={styles["item-hover"]}>
+                            <div className={styles["item-inner"]}>
+                              <img className="mw-100" src={img !== "" ? img : Port} alt="Portfolio Image"/>
+                            </div>
+                            <div className={styles["item-info"]}>
+                              <a href="#" className="text-white text-capitalize">{portfolio.title}</a>
+                              <span className="text-primary d-block">by {portfolio.author.name}</span>
+                              <div className="item-link">
+                                <a className="small-icon btn" href="images/portfolio/01.jpg">
+                                  <span className="ti-plus"/>
+                                </a>
+                                <Link className="small-icon btn" to={portfolio.url}>
+                                  <span className="ti-link"/>
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+                  );
+                })
+              }
             </div>
           </div>
         </div>

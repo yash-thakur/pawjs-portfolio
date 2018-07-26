@@ -12,11 +12,22 @@ import BlogSection from "./blog/blog";
 import TestimonialsSection from "./testimonials/testimonials";
 import Footer from "../footer/footer";
 import {smoothScroll} from "../../utils/utils";
+import Loader from "../loader/loader";
 
 export default class Home extends Component {
   
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    }
+  }
+  
   componentDidMount() {
-    this.scrollPageTo(this.props);
+    this.setState({
+      loading: false
+    });
+    setTimeout(() => this.scrollPageTo(this.props), 300);
   }
   
   componentWillReceiveProps(nextProps) {
@@ -63,6 +74,7 @@ export default class Home extends Component {
   }
   
   render() {
+    if(this.state.loading) return <Loader/>;
     return (
       <div className="row flex-xl-nowrap mx-0">
         <Header/>

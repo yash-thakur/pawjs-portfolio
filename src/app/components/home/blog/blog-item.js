@@ -1,22 +1,22 @@
 import React, {Component} from "react";
+import _ from "lodash";
 import classNames from "classnames";
+import {Link} from "react-router-dom";
 
-// import * as styles from "../home.scss";
-
-import BlogImage from "../../../../resources/images/blog/02.jpg";
+import DefaultBlogImage from "../../../../resources/images/blog/02.jpg";
 
 
 export default class BlogItem extends Component {
   
   render() {
-    const styles = this.props.styles;
+    const {blog, styles} = this.props;
+    let blogImg = _.get(blog, "bannerImg", "")
     return(
       <div className="col-xl-3 col-lg-6 col-sm-6">
         <div className={classNames(styles["blog-block"], "mb-5")}>
-          <div className={styles["blog-bg-img"]} style={{backgroundImage: `url(${BlogImage})`}}>
+          <div className={styles["blog-bg-img"]} style={{backgroundImage: `url(${blogImg !== "" ? blogImg : DefaultBlogImage})`}}>
             <div className={classNames(styles["date-box"], "text-center bg-primary text-white font-weight-medium")}>
-              <span>AUG</span>
-              <span>15</span>
+              <span>{blog.date}</span>
             </div>
           </div>
           <div className={classNames(styles["blog-info"], "p-3 bg-light")}>
@@ -27,19 +27,18 @@ export default class BlogItem extends Component {
               {/*</p>*/}
               <p className="small d-inline-block align-top text-gray-light pr-1">
                 <span className="ti-user pr-1"/>
-                <a href="#" className="text-dark font-weight-medium">Admin </a>
+                <span className="text-dark font-weight-medium">{blog.author.name} </span>
               </p>
               <p className="small text-gray-light">
                 <span className="ti-folder pr-1"/>
-                <a href="#" className="text-dark font-weight-medium">Development</a>
+                <a href="#" className="text-dark font-weight-medium">{_.first(blog.tags)}</a>
               </p>
             </div>
             <div className={styles["blog-content"]}>
-              <a href="#" className={styles["title"]}>Are You Famous Or Focused</a>
-              <p className={classNames(styles["desc"], "text-gray-light")}>Commodo consequat ut enim ad minim niam, quis nostrud ullamco nisi
-                ut aliquip exea non veritatis illum laudantium</p>
+              <Link to={blog.url} className={styles["title"]}>{blog.title}</Link>
+              <p className={classNames(styles["desc"], "text-gray-light")}>{blog.shortDesc}</p>
               <div>
-                <a href="#" className="btn btn-primary btn-sm">Read More...</a>
+                <Link to={blog.url} className="btn btn-primary btn-sm">Read More...</Link>
                 <div className="text-right">
                   <ul className="list-unstyled mb-0">
                     <li className="d-inline-block align-top">

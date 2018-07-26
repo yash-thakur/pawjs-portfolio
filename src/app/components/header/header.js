@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import _ from "lodash";
+import {Link} from "react-router-dom";
 import classNames from "classnames";
 
 import config from "../../../config";
@@ -67,31 +68,31 @@ export default class Header extends Component {
             <div className={styles["menu-links"]}>
               <ul className="list-unstyled mb-0">
                 <li>
-                  <a href="#home" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Home</a>
+                  <Link to="/#home" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Home</Link>
                 </li>
                 <li>
-                  <a href="#about" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>About</a>
+                  <Link to="/#about" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>About</Link>
                 </li>
                 <li>
-                  <a href="#services" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Service</a>
+                  <Link to="/#services" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Service</Link>
                 </li>
                 <li>
-                  <a href="#resume" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Resume</a>
+                  <Link to="/#resume" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Resume</Link>
                 </li>
                 <li>
-                  <a href="#skills" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Skill</a>
+                  <Link to="/#skills" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Skill</Link>
                 </li>
                 <li>
-                  <a href="#portfolio" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Portfolio</a>
+                  <Link to="/#portfolio" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Portfolio</Link>
                 </li>
                 <li>
-                  <a href="#blog" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Blog</a>
+                  <Link to="/#blog" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Blog</Link>
                 </li>
                 <li>
-                  <a href="#testimonials" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Testimonials</a>
+                  <Link to="/#testimonials" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Testimonials</Link>
                 </li>
                 <li>
-                  <a href="#contact" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>contact</a>
+                  <Link to="/#contact" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>contact</Link>
                 </li>
               </ul>
             </div>

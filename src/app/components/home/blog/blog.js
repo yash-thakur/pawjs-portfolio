@@ -5,6 +5,7 @@ import classNames from "classnames";
 import * as styles from "../home.scss";
 
 import BlogItem from "./blog-item";
+import blogList from "../../blogs/blog-list";
 
 export default class BlogSection extends Component {
   render() {
@@ -14,8 +15,8 @@ export default class BlogSection extends Component {
         <h2 className="pb-4">From the blog</h2>
         <div className="row mx-0 my-4">
           {
-            _.map([1,2,3,4], key => {
-              return <BlogItem key={key} styles={styles}/>
+            _.map(_.take(blogList, 4), (blog, key) => {
+              return <BlogItem key={key} styles={styles} blog={blog}/>
             })
           }
         </div>
