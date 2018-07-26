@@ -18,23 +18,23 @@ export default class Portfolio extends Component {
         <h2>My Portfolio</h2>
         <div className="py-4">
           <div>
-            <div className="button-group filters-button-group">
-              <button className={classNames(styles["button"], "btn btn-link px-0 is-checked")} data-filter="*">
-                View All
-                <span className="px-2">/</span>
-              </button>
-              <button className={classNames(styles["button"], "btn btn-link px-0")} data-filter=".web-design">
-                Web Design
-                <span className="px-2">/</span>
-              </button>
-              <button className={classNames(styles["button"], "btn btn-link px-0")} data-filter=".graphic-design"> Graphic Design
-                <span className="px-2">/</span>
-              </button>
-              <button className={classNames(styles["button"], "btn btn-link px-0")} data-filter=".website-templates">
-                Website Templates
-                <span className="px-2">/</span>
-              </button>
-            </div>
+            {/*<div className="button-group filters-button-group">*/}
+              {/*<button className={classNames(styles["button"], "btn btn-link px-0 is-checked")} data-filter="*">*/}
+                {/*View All*/}
+                {/*<span className="px-2">/</span>*/}
+              {/*</button>*/}
+              {/*<button className={classNames(styles["button"], "btn btn-link px-0")} data-filter=".web-design">*/}
+                {/*Web Design*/}
+                {/*<span className="px-2">/</span>*/}
+              {/*</button>*/}
+              {/*<button className={classNames(styles["button"], "btn btn-link px-0")} data-filter=".graphic-design"> Graphic Design*/}
+                {/*<span className="px-2">/</span>*/}
+              {/*</button>*/}
+              {/*<button className={classNames(styles["button"], "btn btn-link px-0")} data-filter=".website-templates">*/}
+                {/*Website Templates*/}
+                {/*<span className="px-2">/</span>*/}
+              {/*</button>*/}
+            {/*</div>*/}
             <div className="grid row my-4 mx-0">
               {
                 _.map(portfoliosList, (portfolio, key) => {
@@ -48,7 +48,7 @@ export default class Portfolio extends Component {
                               <img className="mw-100" src={img !== "" ? img : Port} alt="Portfolio Image"/>
                             </div>
                             <div className={styles["item-info"]}>
-                              <a href="#" className="text-white text-capitalize">{portfolio.title}</a>
+                              <Link to={portfolio.url} className="text-white text-capitalize">{portfolio.title}</Link>
                               <span className="text-primary d-block">by {portfolio.author.name}</span>
                               <div className="item-link">
                                 <a className="small-icon btn" href="images/portfolio/01.jpg">
