@@ -10,9 +10,19 @@ import config from "../../../config";
 import Footer from "../footer/footer";
 
 import blogList from "../blogs/blog-list";
+import {slugify} from "../../utils/utils";
 
 export default class Blog extends Component {
   render() {
+    let newBlogList = blogList;
+    if(this.props.match.path.includes("category")) {
+       newBlogList = _.map(newBlogList, blog => {
+        blog.tags = _.map(blog.tags, tag => slugify(tag));
+        return blog;
+      });
+      newBlogList = _.filter(newBlogList, blog => _.includes(blog.tags, this.props.match.params.category));
+    }
+    console.log(newBlogList);
     return(
       <div className="row flex-xl-nowrap mx-0">
         <Header/>
@@ -43,7 +53,7 @@ export default class Blog extends Component {
           <div className={classNames(styles["blog"], "py-5 mx-4")}>
             <div className="row mx-0 my-4">
               {
-                _.map(blogList, (blog, key) => {
+                _.map(newBlogList, (blog, key) => {
                   return (
                     <BlogItem
                       key={key}

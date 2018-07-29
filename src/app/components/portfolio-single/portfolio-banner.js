@@ -33,7 +33,7 @@ export default class PortfolioBanner extends Component {
           </div>
           <div className="mx-4 py-5 text-white">
             <h1 className="mb-4 font-weight-normal">{this.props.title}</h1>
-            <span>{this.props.authorName}'s Blog</span>
+            <span>{this.props.authorName}'s Portfolio</span>
           </div>
         </div>
       </div>

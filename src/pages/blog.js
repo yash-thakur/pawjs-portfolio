@@ -26,6 +26,15 @@ export default [
     }
   },
   {
+    path: "/blog/categories/:category",
+    component: import("../app/components/blog/index"),
+    exact: true,
+    seo: {
+      title: "Blog | Yash Thakur",
+      description: "Blog posts by Yash Thakur related to coding and other interesting things."
+    }
+  },
+  {
     path: "/blog/temperature-sensor-raspberrypi/",
     exact: true,
     component: import ("../app/components/blogs/temperature-sensor-raspberrypi"),
