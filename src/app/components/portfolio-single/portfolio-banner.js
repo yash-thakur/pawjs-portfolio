@@ -12,7 +12,7 @@ export default class PortfolioBanner extends Component {
       <div className={classNames(styles["bg-img"], styles["gradient"])} style={{backgroundImage: `url(${PortfolioImg})`}}>
         <div className={classNames(styles["blog-content"], "container")}>
           <div className={classNames(styles["top-bar"], "d-flex justify-content-sm-between flex-sm-nowrap flex-wrap mx-4 py-5")}>
-            <Link to="/" className="btn-home btn btn-secondary px-4 text-white d-flex align-items-center mb-2 mr-3">
+            <Link to="/" className={classNames(styles["btn-home"], "btn btn-secondary px-4 text-white d-flex align-items-center mb-2 mr-3")}>
               <span className="ti-angle-left pr-2"/>
               back to home
             </Link>

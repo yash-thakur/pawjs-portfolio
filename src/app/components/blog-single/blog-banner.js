@@ -5,10 +5,12 @@ import classNames from "classnames";
 
 import * as styles from "../blog/blog.scss";
 
+import BannerImg from "../../../resources/images/bg/01.jpg";
+
 export default class BlogBanner extends Component {
   render() {
     return(
-      <div className={classNames(styles["bg-img"], styles["gradient"])} style={{backgroundImage: `url(${this.props.bannerImg})`}}>
+      <div className={classNames(styles["bg-img"], styles["gradient"])} style={{backgroundImage: `url(${_.get(this.props, "bannerImg", BannerImg)})`}}>
         <div className={classNames(styles["blog-content"], "container")}>
           <div className={classNames(styles["top-bar"], "d-flex justify-content-sm-between flex-sm-nowrap flex-wrap mx-4 py-5")}>
             <Link to="/" className={classNames(styles["btn-home"], "btn btn-secondary px-4 text-white d-flex align-items-center mb-2 mr-3")}>

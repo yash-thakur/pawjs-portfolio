@@ -1,10 +1,10 @@
-import Img from "../../../resources/images/my-photo.jpg";
+import Img from "./images/my-pic.jpg";
 
 export default {
   authors: {
     yash_thakur: {
       name: "Yash Thakur",
-      profession: "Web Developer",
+      profession: "Frontend Developer",
       img: Img,
       description: "Sample description"
     }

@@ -1,4 +1,4 @@
-
+import _ from "lodash";
 /**
  * Check if current script is running in browser or not
  * @returns {boolean}
@@ -145,5 +145,41 @@ export const smoothScroll = (eID, padding = 0, speedMultiplier = 1) => {
     leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
   }
 };
+
+/**
+ *
+ */
+export const getHostName = () => applicationHostName;
+
+/**
+ *
+ */
+export const getWindowHost = () => {
+  let host = getHostName();
+  if (typeof window !== "undefined" && _.get(window, "location.hostname", "")) {
+    if (_.isEmpty(host)) {
+      host = `${window.location.protocol}//${window.location.hostname}`;
+      setHostName(host);
+    }
+  }
+  return host;
+};
+
+/**
+ *
+ * @type {string}
+ */
+let applicationHostName = "";
+export const setHostName = (hostName = "") => {
+  applicationHostName = hostName;
+};
+
+
+export const slugify = (string, separator = " +-", ignore = "^+-\\w\\d\\s") => {
+  const ignoreReg = new RegExp(`[${ignore}]`, "g");
+  const separatorReg = new RegExp(`[${separator}]`, "g");
+  return string.replace(ignoreReg, "").replace(separatorReg, "-").trim().toLowerCase();
+};
+
 
 

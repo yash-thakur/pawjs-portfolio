@@ -8,7 +8,7 @@ export default class ProjectWebpack {
       supportedEnv: [
         "production"
       ],
-      configLabel: "MAX_QUALITY"
+      configLabel: "MEDIUM_QUALITY"
     };
     addPlugin(new ImageOptimizer(optimizerOptions));
   }

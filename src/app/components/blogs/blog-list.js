@@ -16,6 +16,6 @@ export default [
     shortDesc: "Arduino coding to make it blink LED based on accelerometer position The code mentioned below ...",
     date: "2 Feb, '17",
     tags: ["IOT", "Arduino", "Coding"],
-    url: ""
+    url: "/blog/arduino-working-accelerometer-led-lights/"
   },
 ];

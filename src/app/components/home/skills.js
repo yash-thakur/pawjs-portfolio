@@ -168,7 +168,7 @@ export default class Skills extends Component {
           <div className="row mx-0">
             <div className="col-md-4 col-sm-6 py-1">
               <span className="ti-hand-point-right pr-2 text-primary"/>
-              <span>Web design and development</span>
+              <span>Web development</span>
             </div>
             <div className="col-md-4 col-sm-6 py-1">
               <span className="ti-hand-point-right pr-2 text-primary"/>
@@ -180,10 +180,6 @@ export default class Skills extends Component {
             </div>
             <div className="col-md-4 col-sm-6 py-1">
               <span className="ti-hand-point-right pr-2 text-primary"/>
-              <span>Multimedia design</span>
-            </div>
-            <div className="col-md-4 col-sm-6 py-1">
-              <span className="ti-hand-point-right pr-2 text-primary"/>
               <span>The ability to pay attention to detail</span>
             </div>
             <div className="col-md-4 col-sm-6 py-1">
@@ -192,19 +188,11 @@ export default class Skills extends Component {
             </div>
             <div className="col-md-4 col-sm-6 py-1">
               <span className="ti-hand-point-right pr-2 text-primary"/>
-              <span>Digital media development</span>
-            </div>
-            <div className="col-md-4 col-sm-6 py-1">
-              <span className="ti-hand-point-right pr-2 text-primary"/>
               <span>Ability to work to deadlines</span>
             </div>
             <div className="col-md-4 col-sm-6 py-1">
               <span className="ti-hand-point-right pr-2 text-primary"/>
               <span>Approach every new skill</span>
-            </div>
-            <div className="col-md-4 col-sm-6 py-1">
-              <span className="ti-hand-point-right pr-2 text-primary"/>
-              <span>Interactive computing</span>
             </div>
             <div className="col-md-4 col-sm-6 py-1">
               <span className="ti-hand-point-right pr-2 text-primary"/>

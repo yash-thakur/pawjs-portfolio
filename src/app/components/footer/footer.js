@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import * as styles from "../home/home.scss";
 import {loadScript} from "../../utils/utils";
+import config from "../../../config";
 
 export default class Footer extends Component {
   
@@ -74,32 +75,23 @@ export default class Footer extends Component {
                 more.</p>
               <ul className="list-unstyled text-center pt-4">
                 <li className="d-inline-block align-top">
-                  <a href="#" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-facebook"/></a>
+                  <a href={config.social.fb} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-facebook"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href="#" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-twitter"/></a>
+                  <a href={config.social.twitter} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-twitter"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href="#" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-dribbble"/></a>
+                  <a href={config.social.github} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-github"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href="#" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-vimeo"/></a>
-                </li>
-                <li className="d-inline-block align-top">
-                  <a href="#" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-pinterest-p"/></a>
-                </li>
-                <li className="d-inline-block align-top">
-                  <a href="#" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-behance"/></a>
-                </li>
-                <li className="d-inline-block align-top">
-                  <a href="#" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-linkedin"/></a>
+                  <a href={config.social.linkedIn} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-linkedin"/></a>
                 </li>
               </ul>
             </div>
             <div className="text-center pt-4">
               <a
                 className="btn btn-primary py-3 px-4 text-uppercase"
-                href="http://yashthakur.in/wp-content/uploads/2017/01/Resume.pdf"
+                href=""
               >
                 Download my CV
               </a>

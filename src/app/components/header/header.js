@@ -38,7 +38,7 @@ export default class Header extends Component {
         )}>
         <div className={classNames(styles["header-bar"], "d-flex align-items-center d-lg-none")}>
           <h4 className="font-weight-bold mb-0">
-            <a href="#" className="text-uppercase text-white">{_.get(config, "name", "")}</a>
+            <Link to="/" className="text-uppercase text-white">{_.get(config, "name", "")}</Link>
           </h4>
           <button
             className={classNames(styles["toggle-btn"], "btn btn-link p-0")}
@@ -60,9 +60,9 @@ export default class Header extends Component {
         <div className={classNames(styles["left-sidebar"], "bg-dark col-lg-3 col-xl-2 px-0")}>
           <nav>
             <div className="p-3 text-center">
-              <a href="#"className={styles["logo"]}>
+              <Link to="/"className={styles["logo"]}>
                 <img id="logo_img" src={Logo} alt="LOGO" className="mw-100"/>
-              </a>
+              </Link>
             </div>
             <p className={classNames(styles["site-description"], "mt-2")}>{_.get(config, "motto", "")}</p>
             <div className={styles["menu-links"]}>
@@ -101,13 +101,13 @@ export default class Header extends Component {
             <div className="px-4 py-2">
               <ul className="list-unstyled mb-0">
                 <li className="d-inline-block p-2">
-                  <a href="#" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-facebook"/></a>
+                  <a href={config.social.fb} target="_blank" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-facebook"/></a>
                 </li>
                 <li className="d-inline-block p-2">
-                  <a href="#" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-twitter"/></a>
+                  <a href={config.social.twitter} target="_blank" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-twitter"/></a>
                 </li>
                 <li className="d-inline-block p-2">
-                  <a href="#" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-linkedin"/> </a>
+                  <a href={config.social.linkedIn} target="_blank" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-linkedin"/> </a>
                 </li>
               </ul>
             </div>

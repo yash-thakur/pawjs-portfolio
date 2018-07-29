@@ -19,25 +19,16 @@ export default class About extends Component {
               <img src={MyImg} alt="User" className="w-100 mw-100"/>
             </div>
             <div className="about-social bg-primary text-center p-3 text-center">
-              <a href="#" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+              <a href={config.social.fb} target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
                 <i className="fa fa-facebook"/>
               </a>
-              <a href="#" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+              <a href={config.social.twitter} target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
                 <i className="fa fa-twitter"/>
               </a>
-              <a href="#" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
-                <i className="fa fa-dribbble"/>
+              <a href={config.social.github} target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+                <i className="fa fa-github"/>
               </a>
-              <a href="#" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
-                <i className="fa fa-vimeo"/>
-              </a>
-              <a href="#" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
-                <i className="fa fa-pinterest-p"/>
-              </a>
-              <a href="#" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
-                <i className="fa fa-behance"/>
-              </a>
-              <a href="#" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+              <a href={config.social.linkedIn} target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
                 <i className="fa fa-linkedin"/>
               </a>
             </div>

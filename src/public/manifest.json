@@ -1,0 +1,22 @@
+{
+  "name": "Yash Thakur",
+  "short_name": "Yash Thakur",
+  "dir": "ltr",
+  "lang": "en-US",
+  "orientation": "any",
+  "start_url": "/",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "display": "standalone",
+  "description": "Yash Thakur - A Frontend, ReactJs developer.",
+  "icons": [
+    {
+      "src": "/images/715d8373bad8c370c2922f09e90f4224.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/3a8136a792cfe525ff82f7488883fa1d.png",
+      "sizes": "512x512"
+    }
+  ]
+}
