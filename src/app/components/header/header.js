@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import _ from "lodash";
+import {withRouter} from "react-router";
 import {Link} from "react-router-dom";
 import classNames from "classnames";
 
@@ -11,7 +12,7 @@ import * as styles from "./header.scss";
 //Images
 import Logo from "../../../resources/images/logo.png";
 
-export default class Header extends Component {
+class Header extends Component {
   
   constructor(props) {
     super(props);
@@ -29,6 +30,7 @@ export default class Header extends Component {
     });
   }
   render() {
+    const locationHash = this.props.location.hash;
     return (
       <header
         className={classNames(
@@ -68,31 +70,112 @@ export default class Header extends Component {
             <div className={styles["menu-links"]}>
               <ul className="list-unstyled mb-0">
                 <li>
-                  <Link to="/#home" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Home</Link>
+                  <Link
+                    to="/#home"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#home" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#about" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>About</Link>
+                  <Link
+                    to="/#about"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#about" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#services" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Service</Link>
+                  <Link
+                    to="/#services"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#services" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    Service
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#resume" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Resume</Link>
+                  <Link
+                    to="/#resume"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#resume" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    Resume
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#skills" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Skill</Link>
+                  <Link
+                    to="/#skills"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#skills" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    Skill
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#portfolio" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Portfolio</Link>
+                  <Link
+                    to="/#portfolio"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#portfolio" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    Portfolio
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#blog" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Blog</Link>
+                  <Link
+                    to="/#blog"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#blog" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    Blog
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#testimonials" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>Testimonials</Link>
+                  <Link
+                    to="/#testimonials"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#testimonials" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    Testimonials
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/#contact" className={classNames(styles["site-links"], "page-scroll text-uppercase px-4 py-2 d-block")}>contact</Link>
+                  <Link
+                    to="/#contact"
+                    className={classNames(
+                      styles["site-links"],
+                      locationHash === "#contact" ? styles["active"] : "",
+                      "page-scroll text-uppercase px-4 py-2 d-block"
+                    )}
+                  >
+                    contact
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -122,3 +205,5 @@ export default class Header extends Component {
   );
   }
 }
+
+export default Header=withRouter(Header);

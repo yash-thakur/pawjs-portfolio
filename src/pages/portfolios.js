@@ -14,4 +14,14 @@ export default [
       image: TheGroundUpImg,
     }
   },
+  {
+    path: "/portfolios/tags/:tagName",
+    exact: true,
+    component: import("../app/components/blog/index"),
+    seo: {
+      title: "Portfolio Tags | Yash Thakur",
+      name: "Portfolio Tags | Yash Thakur",
+      description: "Portfolios related to the tag.",
+    }
+  },
 ];

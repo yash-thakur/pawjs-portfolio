@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import _ from "lodash";
 import {Link} from "react-router-dom";
 import classNames from "classnames";
+import {withRouter} from "react-router";
 import * as styles from "../blog/blog.scss";
 import Swiper from "swiper/dist/js/swiper.js";
 
@@ -11,7 +12,8 @@ import blogList from "../blogs/blog-list";
 import "swiper/dist/css/swiper.css";
 import {getWindowHost, slugify} from "../../utils/utils";
 
-export default class BlogBody extends Component {
+
+class BlogBody extends Component {
   
   componentDidMount() {
     //eslint-disable-next-line
@@ -29,6 +31,7 @@ export default class BlogBody extends Component {
       tags=[...tags, ...blog.tags];
     });
     const categories = _.uniq(tags);
+    const location = this.props.location;
     return (
       <div className={classNames(styles["blog-desc"], "py-5 mx-4")}>
         <div className="row mx-0">
@@ -119,3 +122,5 @@ export default class BlogBody extends Component {
     );
   }
 }
+
+export default BlogBody = withRouter(BlogBody);

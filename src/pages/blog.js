@@ -22,6 +22,7 @@ export default [
     exact: true,
     seo: {
       title: "Blog | Yash Thakur",
+      name: "Blog | Yash Thakur",
       description: "Blog posts by Yash Thakur related to coding and other interesting things."
     }
   },
@@ -31,6 +32,7 @@ export default [
     exact: true,
     seo: {
       title: "Blog | Yash Thakur",
+      name: "Blog | Yash Thakur",
       description: "Blog posts by Yash Thakur related to coding and other interesting things."
     }
   },

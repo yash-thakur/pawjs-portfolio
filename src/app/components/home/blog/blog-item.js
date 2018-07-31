@@ -1,16 +1,18 @@
 import React, {Component} from "react";
 import _ from "lodash";
 import classNames from "classnames";
+import {withRouter} from "react-router";
 import {Link} from "react-router-dom";
 
 import DefaultBlogImage from "../../../../resources/images/blog/02.jpg";
+import {getWindowHost, slugify} from "../../../utils/utils";
 
 
-export default class BlogItem extends Component {
+class BlogItem extends Component {
   
   render() {
     const {blog, styles} = this.props;
-    let blogImg = _.get(blog, "bannerImg", "")
+    let blogImg = _.get(blog, "bannerImg", "");
     return(
       <div className="col-xl-3 col-lg-6 col-sm-6">
         <div className={classNames(styles["blog-block"], "mb-5")}>
@@ -31,7 +33,7 @@ export default class BlogItem extends Component {
               </p>
               <p className="small text-gray-light">
                 <span className="ti-folder pr-1"/>
-                <a href="#" className="text-dark font-weight-medium">{_.first(blog.tags)}</a>
+                <Link to={this.props.isBlogList ? `/blog/category/${slugify(_.first(blog.tags))}` : `/portfolios/tags/${slugify(_.first(blog.tags))}`} className="text-dark font-weight-medium">{_.first(blog.tags)}</Link>
               </p>
             </div>
             <div className={styles["blog-content"]}>
@@ -42,13 +44,13 @@ export default class BlogItem extends Component {
                 <div className="text-right">
                   <ul className="list-unstyled mb-0">
                     <li className="d-inline-block align-top">
-                      <a href="#" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
+                      <a href={`https://www.facebook.com/share.php?u=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
                     </li>
                     <li className="d-inline-block align-top">
-                      <a href="#" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
+                      <a href={`https://twitter.com/intent/tweet?text=${_.get(this.props, "title", "Blog by Yash Thakur")}&hashtags=yashthakur&url=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
                     </li>
                     <li className="d-inline-block align-top">
-                      <a href="#" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
+                      <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
                     </li>
                   </ul>
                 </div>
@@ -60,3 +62,5 @@ export default class BlogItem extends Component {
     );
   }
 }
+
+export default BlogItem = withRouter(BlogItem);

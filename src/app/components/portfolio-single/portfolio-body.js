@@ -1,10 +1,14 @@
 import React, {Component} from "react";
 import classNames from "classnames";
+import {Link} from "react-router-dom";
 import _ from "lodash";
 import Swiper from "swiper/dist/js/swiper.js";
 
 import * as styles from "./portofolio-single.scss";
 import "swiper/dist/css/swiper.css";
+import config from "../../../config";
+import {slugify} from "../../utils/utils";
+import portfoliosList from "../portfolios/portfolios-list";
 
 export default class PortfolioBody extends Component {
   
@@ -19,6 +23,7 @@ export default class PortfolioBody extends Component {
   }
   
   render() {
+    const tags = _.get(_.find(portfoliosList, portfolio => portfolio.title.toLowerCase() === this.props.title.toLowerCase()), "tags", []);
     return (
       <div className={classNames(styles["portfolio-desc"], "py-5 mx-4")}>
         <div className="row mx-0">
@@ -44,9 +49,13 @@ export default class PortfolioBody extends Component {
             <div className="py-3">
               <h6 className="d-inline-block align-middle mr-2 mb-0">Tags:</h6>
               <div className="d-inline-block align-middle">
-                <a href="#" className={classNames(styles["btn-tag"], "btn btn-sm btn-primary mr-2")}>Design</a>
-                <a href="#" className={classNames(styles["btn-tag"], "btn btn-sm btn-primary mr-2")}>Creative</a>
-                <a href="#" className={classNames(styles["btn-tag"], "btn btn-sm btn-primary mr-2")}>HTML5</a>
+                {
+                  _.map(_.take(tags, 4), (tag,key) => {
+                    return (
+                      <Link to={`/portfolios/tags/${slugify(tag)}`} key={key} className={classNames(styles["btn-tag"], "btn btn-sm btn-primary mr-2")}>{tag}</Link>
+                    );
+                  })
+                }
               </div>
             </div>
             <ul className="list-unstyled">
@@ -86,9 +95,9 @@ export default class PortfolioBody extends Component {
                 </h4>
                 <div className="float-right">
                   <strong>Follow on:</strong>
-                  <a href="#" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
-                  <a href="#" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
-                  <a href="#" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-pinterest-p"/></a>
+                  <a href={config.social.fb} target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
+                  <a href={config.social.twitter} target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
+                  <a href={config.social.linkedIn} target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
                 </div>
               </div>
               <div className={classNames(styles["post-desc"], "text-gray-light")}>
