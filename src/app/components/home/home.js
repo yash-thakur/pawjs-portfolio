@@ -78,7 +78,7 @@ export default class Home extends Component {
     return (
       <div className="row flex-xl-nowrap mx-0">
         <Header/>
-        <main className="col-12 col-md-9 col-xl-10 p-0">
+        <main className="col-12 col-lg-9 col-xl-10 p-0">
           <HomeBanner ref={el => this.home = el}/>
           <About ref={el => this.about = el}/>
           <Services ref={el => this.services = el}/>

@@ -15,11 +15,6 @@ export default class TemperatureSensorRaspberryPi extends Component {
         title="Temperature Sensor Using Arduino And RaspberryPi"
         bannerImg={BannerImg}
         author={_.get(authorsList, "authors.yash_thakur", {})}
-        sliderImgs={[
-          SliderImg,
-          SliderImg,
-          SliderImg
-        ]}
       >
         <div>
           <p>Here we will connect an LM35 temperature sensor to Arduino and use its readings in RaspberryPi to monitor the
@@ -45,7 +40,7 @@ export default class TemperatureSensorRaspberryPi extends Component {
             <li>Connect Arduino Uno to RaspberryPi using the USB cable.
               <a href="http://yashthakur.in/wp-content/uploads/2017/03/raspberrypi-arduino.jpg">
                 <img
-                  className="aligncenter size-full"
+                  className="img-fluid aligncenter size-full"
                   src="http://yashthakur.in/wp-content/uploads/2017/03/raspberrypi-arduino.jpg"
                   alt="Connection of RaspberryPi and Arduino" width="620" height="465"
                 />

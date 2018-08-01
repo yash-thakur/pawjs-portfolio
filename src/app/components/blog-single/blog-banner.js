@@ -37,11 +37,11 @@ export default class BlogBanner extends Component {
             <div className={styles["blog-meta"]}>
               <p className="d-inline-block align-top pr-2">
                 <span className="ti-user pr-1"/>
-                <a href="#">{_.get(this.props, "author.name", "")} </a>
+                <span>{_.get(this.props, "author.name", "")} </span>
               </p>
               <p className="d-inline-block align-top pr-2">
                 <span className="ti-folder pr-1"/>
-                <a href="#">{_.get(this.props, "author.profession", "")}</a>
+                <span>{_.get(this.props, "author.profession", "")}</span>
               </p>
             </div>
           </div>

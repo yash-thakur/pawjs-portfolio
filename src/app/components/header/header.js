@@ -36,7 +36,7 @@ class Header extends Component {
         className={classNames(
           styles["site-header"],
           this.state.isMobileMenuOpen ? styles["open"] : "",
-          "col-md-3 col-xl-2"
+          "col-lg-3 col-xl-2"
         )}>
         <div className={classNames(styles["header-bar"], "d-flex align-items-center d-lg-none")}>
           <h4 className="font-weight-bold mb-0">
@@ -74,9 +74,10 @@ class Header extends Component {
                     to="/#home"
                     className={classNames(
                       styles["site-links"],
-                      locationHash === "#home" ? styles["active"] : "",
+                      locationHash === "#home" || (this.props.location.pathname === "/" && locationHash === "")? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     Home
                   </Link>
@@ -89,6 +90,7 @@ class Header extends Component {
                       locationHash === "#about" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     About
                   </Link>
@@ -101,6 +103,7 @@ class Header extends Component {
                       locationHash === "#services" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     Service
                   </Link>
@@ -113,6 +116,7 @@ class Header extends Component {
                       locationHash === "#resume" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     Resume
                   </Link>
@@ -125,6 +129,7 @@ class Header extends Component {
                       locationHash === "#skills" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     Skill
                   </Link>
@@ -137,6 +142,7 @@ class Header extends Component {
                       locationHash === "#portfolio" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     Portfolio
                   </Link>
@@ -149,6 +155,7 @@ class Header extends Component {
                       locationHash === "#blog" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     Blog
                   </Link>
@@ -161,6 +168,7 @@ class Header extends Component {
                       locationHash === "#testimonials" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     Testimonials
                   </Link>
@@ -173,6 +181,7 @@ class Header extends Component {
                       locationHash === "#contact" ? styles["active"] : "",
                       "page-scroll text-uppercase px-4 py-2 d-block"
                     )}
+                    onClick={() => this.toggleMenu()}
                   >
                     contact
                   </Link>

@@ -6,7 +6,7 @@ export default {
       name: "Yash Thakur",
       profession: "Frontend Developer",
       img: Img,
-      description: "Sample description"
+      description: "A Front-End ReactJs developer."
     }
   }
 }

@@ -8,7 +8,7 @@ $left-sidebar-width: 14.375rem;
     justify-content: center;
     align-items: center;
     text-align: center;
-    @include size(12rem);
+    @include size(8rem);
     background-color: theme-color('primary');
     color: $white;
   }
@@ -20,6 +20,14 @@ $left-sidebar-width: 14.375rem;
     left: 0;
     bottom: 0;
     overflow-y: auto;
+    z-index: 9;
+  }
+  .site-description {
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+    color: #9ea8b6;
+    line-height: 24px;
   }
   .site-links,
   .social-icon {
@@ -29,13 +37,6 @@ $left-sidebar-width: 14.375rem;
       color: theme-color("primary");
       text-decoration: none;
     }
-  }
-  .site-description {
-    font-style: italic;
-    text-align: center;
-    font-size: 14px;
-    color: #9ea8b6;
-    line-height: 24px;
   }
   .site-links {
     font-size: .875rem;
@@ -97,7 +98,7 @@ $left-sidebar-width: 14.375rem;
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .site-header {
     position: fixed;
     top: 0;
@@ -114,8 +115,9 @@ $left-sidebar-width: 14.375rem;
       right: 0;
       color: $white;
       top: 50%;
-      margin-top: -1rem;
+      margin-top: -1.15rem;
       margin-right: 1rem;
+      line-height: .7;
       @include transition(.3s all linear);
       &:focus {
         outline: 0;
@@ -126,6 +128,7 @@ $left-sidebar-width: 14.375rem;
       @include transition(.3s all linear);
       width: $left-sidebar-width;
       top: 3rem;
+      height: calc(100% - 3rem);
     }
     &.open {
       .left-sidebar {
