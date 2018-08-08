@@ -20,15 +20,19 @@ export default class About extends Component {
             </div>
             <div className="about-social bg-primary text-center p-3 text-center">
               <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+                <span className="d-none">FB URL</span>
                 <i className="fa fa-facebook"/>
               </a>
               <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+                <span className="d-none">Twitter URL</span>
                 <i className="fa fa-twitter"/>
               </a>
               <a href={config.social.github} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+                <span className="d-none">Github URL</span>
                 <i className="fa fa-github"/>
               </a>
               <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-inline-flex align-items-center justify-content-center m-1")}>
+                <span className="d-none">LinkedIn URL</span>
                 <i className="fa fa-linkedin"/>
               </a>
             </div>

@@ -1,0 +1,14 @@
+{
+  "port": "3007",
+  "host": "0.0.0.0",
+  "cdnUrl": "https://cdn.yashthakur.in",
+  "appRootUrl": "/",
+  "serviceWorker": true,
+  "serverSideRender": true,
+  "clientRootElementId": "app",
+  "asyncCSS": true,
+  "hstsEnabled": true,
+  "hstsmaxAge": 31536000,
+  "hstsIncludeSubDomains": true,
+  "hstsPreload": false
+}

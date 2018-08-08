@@ -193,13 +193,13 @@ class Header extends Component {
             <div className="px-4 py-2">
               <ul className="list-unstyled mb-0">
                 <li className="d-inline-block p-2">
-                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-facebook"/></a>
+                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-block")}><span className="d-none">FB URL</span><i className="fa fa-facebook"/></a>
                 </li>
                 <li className="d-inline-block p-2">
-                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-twitter"/></a>
+                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-block")}><span className="d-none">Twitter URL</span><i className="fa fa-twitter"/></a>
                 </li>
                 <li className="d-inline-block p-2">
-                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-block")}><i className="fa fa-linkedin"/> </a>
+                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "d-block")}><span className="d-none">LinkedIn URL</span><i className="fa fa-linkedin"/> </a>
                 </li>
               </ul>
             </div>

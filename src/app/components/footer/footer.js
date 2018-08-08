@@ -77,16 +77,16 @@ export default class Footer extends Component {
                 more.</p>
               <ul className="list-unstyled text-center pt-4">
                 <li className="d-inline-block align-top">
-                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-facebook"/></a>
+                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><span className="d-none">FB URL</span><i className="fa fa-facebook"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-twitter"/></a>
+                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><span className="d-none">Twitter URL</span><i className="fa fa-twitter"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href={config.social.github} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-github"/></a>
+                  <a href={config.social.github} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><span className="d-none">Github URL</span><i className="fa fa-github"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-linkedin"/></a>
+                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><span className="d-none">LinkedIn URL</span><i className="fa fa-linkedin"/></a>
                 </li>
               </ul>
             </div>

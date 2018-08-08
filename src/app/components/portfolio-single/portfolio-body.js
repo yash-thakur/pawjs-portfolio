@@ -84,7 +84,7 @@ export default class PortfolioBody extends Component {
           <div className="d-sm-table">
             <div className="d-sm-table-cell align-top mb-3">
               <div className={classNames(styles["post-photo"], "pr-3 mx-auto")}>
-                <img src={_.get(this.props, "author.img", "")} alt="" className="mw-100"/>
+                <img src={_.get(this.props, "author.img", "")} alt="Author Image" className="mw-100"/>
               </div>
             </div>
             <div className="d-sm-table-cell align-top w-100">
@@ -95,9 +95,9 @@ export default class PortfolioBody extends Component {
                 </h4>
                 <div className="float-right">
                   <strong>Follow on:</strong>
-                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
-                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
-                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
+                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><span className="d-none">FB URL</span><i className="fa fa-facebook"/></a>
+                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><span className="d-none">Twitter URL</span><i className="fa fa-twitter"/></a>
+                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><span className="d-none">LinkedIn URL</span><i className="fa fa-linkedin"/></a>
                 </div>
               </div>
               <div className={classNames(styles["post-desc"], "text-gray-light")}>

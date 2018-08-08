@@ -4,7 +4,7 @@
   "description": "A portfolio using ReactJS, HTML5",
   "scripts": {
     "start": "pawjs --env=development start",
-    "build": "pawjs --env=production build"
+    "build": "pawjs --env=production --config=pawconfig-prod.json build"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@pawjs/image-optimizer": "^0.8.7",
-    "@pawjs/pawjs": "^2.0.0",
+    "@pawjs/pawjs": "^2.1.2",
     "@pawjs/sass": "^2.1.5"
   }
 }

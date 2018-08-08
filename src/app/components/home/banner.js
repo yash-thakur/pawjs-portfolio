@@ -44,6 +44,7 @@ export default class HomeBanner extends Component {
           </div>
           <a href="#about" className={styles["scroll-down"]}>
             <span/>
+            <span className="d-none">Scroller</span>
           </a>
         </div>
       </div>

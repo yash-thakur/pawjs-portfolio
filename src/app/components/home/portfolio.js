@@ -55,9 +55,11 @@ export default class Portfolio extends Component {
                               <span className="text-primary d-block">by {portfolio.author.name}</span>
                               <div className="item-link">
                                 <a className="small-icon btn" href="images/portfolio/01.jpg">
+                                  <span className="d-none">Img</span>
                                   <span className="ti-plus"/>
                                 </a>
                                 <Link className="small-icon btn" to={portfolio.url}>
+                                  <span className="d-none">Img url</span>
                                   <span className="ti-link"/>
                                 </Link>
                               </div>
