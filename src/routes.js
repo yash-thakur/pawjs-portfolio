@@ -58,6 +58,10 @@ export default class Routes {
           {
             name: "viewport",
             content: "width=device-width, initial-scale=1, maximum-scale=5.0"
+          },
+          {
+            name: "google-site-verification",
+            content: "1fGCQiiP3Tk4sGCKGPjvdJ7_ZsV2KR-HEB5X6iA360M"
           }
         ]
       })
