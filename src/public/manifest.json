@@ -1,12 +1,12 @@
 {
   "name": "Yash Thakur",
-  "short_name": "Yash Thakur",
+  "short_name": "YT",
   "dir": "ltr",
   "lang": "en-US",
   "orientation": "any",
   "start_url": "/",
-  "background_color": "#fff",
-  "theme_color": "#fff",
+  "background_color": "#26ade4",
+  "theme_color": "#26ade4",
   "display": "standalone",
   "description": "Yash Thakur - A Frontend, ReactJs developer.",
   "icons": [

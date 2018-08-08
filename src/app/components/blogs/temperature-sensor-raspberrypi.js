@@ -5,7 +5,7 @@ import authorsList from "../portfolios/authorsList";
 
 import Prism from "../prism/prism";
 
-import SliderImg from "../../../resources/images/blog/09.jpg";
+import ArduinoImg from "./images/raspberrypi-arduino.jpg";
 
 import BannerImg from "../../../resources/images/bg/01.jpg";
 export default class TemperatureSensorRaspberryPi extends Component {
@@ -38,10 +38,10 @@ export default class TemperatureSensorRaspberryPi extends Component {
               less secure apps.
             </li>
             <li>Connect Arduino Uno to RaspberryPi using the USB cable.
-              <a href="http://yashthakur.in/wp-content/uploads/2017/03/raspberrypi-arduino.jpg">
+              <a href="">
                 <img
                   className="img-fluid aligncenter size-full"
-                  src="http://yashthakur.in/wp-content/uploads/2017/03/raspberrypi-arduino.jpg"
+                  src={ArduinoImg}
                   alt="Connection of RaspberryPi and Arduino" width="620" height="465"
                 />
               </a>

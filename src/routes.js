@@ -28,6 +28,22 @@ export default class Routes {
             content: "Yash Thakur"
           },
           {
+            name: "description",
+            content: "Yash Thakur - A Frontend, ReactJs developer."
+          },
+          {
+            name: "theme-color",
+            content: "#26ade4"
+          },
+          {
+            name: "apple-mobile-web-app-status-bar-style",
+            content: "#26ade4",
+          },
+          {
+            name: "msapplication-TileColor",
+            content: "#26ade4"
+          },
+          {
             name: "application-name",
             content: "Yash Thakur",
           },
@@ -41,7 +57,7 @@ export default class Routes {
           },
           {
             name: "viewport",
-            content: "width=device-width, initial-scale=1"
+            content: "width=device-width, initial-scale=1, maximum-scale=5.0"
           }
         ]
       })

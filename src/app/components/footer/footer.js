@@ -5,6 +5,8 @@ import * as styles from "../home/home.scss";
 import {loadScript} from "../../utils/utils";
 import config from "../../../config";
 
+import BlueMarker from "./images/blue-marker.png";
+
 export default class Footer extends Component {
   
   componentDidMount() {
@@ -12,7 +14,7 @@ export default class Footer extends Component {
   }
   
   componentWillReceiveProps() {
-    this.initializeMap();
+    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBhtR7n5LkRkbspO-WBtQue6jSBi26j03k&ver=4.9.4").then(() => this.initializeMap());
   }
   
   
@@ -42,7 +44,7 @@ export default class Footer extends Component {
     let marker = new google.maps.Marker({
       position: new google.maps.LatLng(20.599046699073398,72.94154964409734),
       map: map,
-      icon: "http://yashthakur.in/wp-content/uploads/2017/01/blue-marker.png",
+      icon: BlueMarker,
     });
   }
   
@@ -51,7 +53,7 @@ export default class Footer extends Component {
       <div className={styles["contact"]}>
         <div className={styles["contact-info"]}>
           <div id="google-map">
-            <div id="map-canvas" className={styles["map-canvas"]}/>
+            <div id="map-canvas" className=""/>
           </div>
           <div className={classNames(styles["contact-details"], "p-4 text-white")}>
             <h2 className="font-weight-normal my-4">Say Hi It’s Free!</h2>
@@ -75,16 +77,16 @@ export default class Footer extends Component {
                 more.</p>
               <ul className="list-unstyled text-center pt-4">
                 <li className="d-inline-block align-top">
-                  <a href={config.social.fb} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-facebook"/></a>
+                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-facebook"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href={config.social.twitter} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-twitter"/></a>
+                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-twitter"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href={config.social.github} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-github"/></a>
+                  <a href={config.social.github} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-github"/></a>
                 </li>
                 <li className="d-inline-block align-top">
-                  <a href={config.social.linkedIn} target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-linkedin"/></a>
+                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "px-2")}><i className="fa fa-linkedin"/></a>
                 </li>
               </ul>
             </div>

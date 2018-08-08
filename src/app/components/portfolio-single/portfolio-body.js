@@ -77,7 +77,7 @@ export default class PortfolioBody extends Component {
               </li>
             </ul>
             {this.props.children}
-            <a href={this.props.projectUrl} target="_blank" className="btn btn-primary px-4 text-uppercase">View Project</a>
+            <a href={this.props.projectUrl} rel="noreferrer noopener nofollow" target="_blank" className="btn btn-primary px-4 text-uppercase">View Project</a>
           </div>
         </div>
         <div className="bg-light p-3 mt-5 mb-3">
@@ -95,9 +95,9 @@ export default class PortfolioBody extends Component {
                 </h4>
                 <div className="float-right">
                   <strong>Follow on:</strong>
-                  <a href={config.social.fb} target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
-                  <a href={config.social.twitter} target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
-                  <a href={config.social.linkedIn} target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
+                  <a href={config.social.fb} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
+                  <a href={config.social.twitter} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
+                  <a href={config.social.linkedIn} rel="noreferrer noopener nofollow" target="_blank" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
                 </div>
               </div>
               <div className={classNames(styles["post-desc"], "text-gray-light")}>

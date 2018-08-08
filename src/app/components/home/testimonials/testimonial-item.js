@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import _ from "lodash";
+import LazyLoad from "react-lazyload";
 import classNames from "classnames";
 
 import * as styles from "../home.scss";
@@ -12,7 +13,9 @@ export default class TestimonialItem extends Component {
         <div className="testimonials-block">
           <div className={classNames(styles["testimonials-content"], "rounded p-3 d-table")}>
             <div className={classNames(styles["testimonials-avtar"], "d-table-cell align-middle")}>
-              <img src={_.get(this.props, "testimonial.img")} alt={_.get(this.props, "testimonial.name")} className="rounded-circle"/>
+              <LazyLoad height={200} offset={200}>
+                <img src={_.get(this.props, "testimonial.img")} alt={_.get(this.props, "testimonial.name")} className="rounded-circle"/>
+              </LazyLoad>
             </div>
             <div className="d-table-cell align-middle pl-3 text-gray-light">
               <p className={classNames(styles["comment"], "mb-0")}>{_.get(this.props, "testimonial.review")}</p>

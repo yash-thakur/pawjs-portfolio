@@ -74,7 +74,7 @@ export default class Home extends Component {
   }
   
   render() {
-    if(this.state.loading) return <Loader/>;
+    // if(this.state.loading) return <Loader/>;
     return (
       <div className="row flex-xl-nowrap mx-0">
         <Header/>

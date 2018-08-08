@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import _ from "lodash";
+import LazyLoad from "react-lazyload";
 import {Link} from "react-router-dom";
 import classNames from "classnames";
 
@@ -45,7 +46,9 @@ export default class Portfolio extends Component {
                         <div className={styles["item"]}>
                           <div className={styles["item-hover"]}>
                             <div className={styles["item-inner"]}>
-                              <img className="mw-100" src={img !== "" ? img : Port} alt="Portfolio Image"/>
+                              <LazyLoad height={200} offset={200}>
+                                <img className="mw-100" src={img !== "" ? img : Port} alt="Portfolio Image"/>
+                              </LazyLoad>
                             </div>
                             <div className={styles["item-info"]}>
                               <Link to={portfolio.url} className="text-white text-capitalize">{portfolio.title}</Link>

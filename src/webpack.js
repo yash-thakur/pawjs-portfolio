@@ -1,4 +1,5 @@
 import ImageOptimizer from "@pawjs/image-optimizer/lib/webpack";
+// import SassPlugin from "@pawjs/sass/webpack";
 
 export default class ProjectWebpack {
   constructor({addPlugin}) {
@@ -11,5 +12,6 @@ export default class ProjectWebpack {
       configLabel: "MEDIUM_QUALITY"
     };
     addPlugin(new ImageOptimizer(optimizerOptions));
+    // addPlugin(new SassPlugin);
   }
 }

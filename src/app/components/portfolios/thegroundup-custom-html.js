@@ -31,7 +31,7 @@ export default class TheGroundUp extends Component {
             calculator which you can see above this invoice form which should give the cost of sending the quantity to a
             particular location.</p>
           <h2>The work:</h2>
-          <p>The work is complete as per the requirement and you can follow up the <a href="http://thegroundup.com/staff-resources/" target="_blank">link</a> to check the work in action.</p></div>
+          <p>The work is complete as per the requirement and you can follow up the <a href="http://thegroundup.com/staff-resources/" rel="noreferrer noopener nofollow" target="_blank">link</a> to check the work in action.</p></div>
       </PortfolioSingle>
     );
   }

@@ -44,13 +44,13 @@ class BlogItem extends Component {
                 <div className="text-right">
                   <ul className="list-unstyled mb-0">
                     <li className="d-inline-block align-top">
-                      <a href={`https://www.facebook.com/share.php?u=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
+                      <a href={`https://www.facebook.com/share.php?u=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} rel="noreferrer noopener nofollow" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-facebook"/></a>
                     </li>
                     <li className="d-inline-block align-top">
-                      <a href={`https://twitter.com/intent/tweet?text=${_.get(this.props, "title", "Blog by Yash Thakur")}&hashtags=yashthakur&url=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
+                      <a href={`https://twitter.com/intent/tweet?text=${_.get(this.props, "title", "Blog by Yash Thakur")}&hashtags=yashthakur&url=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} rel="noreferrer noopener nofollow" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-twitter"/></a>
                     </li>
                     <li className="d-inline-block align-top">
-                      <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
+                      <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`${getWindowHost()}${blog.url}`)}`} rel="noreferrer noopener nofollow" className={classNames(styles["social-icon"], "p-1")}><i className="fa fa-linkedin"/></a>
                     </li>
                   </ul>
                 </div>

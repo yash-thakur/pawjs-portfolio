@@ -84,16 +84,16 @@ class BlogBody extends Component {
               <div>
                 <h6 className="d-inline-block align-top text-gray-light mb-0">Share Post:</h6>
                 <div className="d-inline-block align-top">
-                  <a href={`https://www.facebook.com/share.php?u=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} className="social-icon p-1">
+                  <a href={`https://www.facebook.com/share.php?u=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} rel="noreferrer noopener nofollow" className="social-icon p-1">
                     <i className="fa fa-facebook"/>
                   </a>
-                  <a href={`https://twitter.com/intent/tweet?text=${_.get(this.props, "title", "Blog by Yash Thakur")}&hashtags=blog, yashthakur&url=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} className="social-icon p-1">
+                  <a href={`https://twitter.com/intent/tweet?text=${_.get(this.props, "title", "Blog by Yash Thakur")}&hashtags=blog, yashthakur&url=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} rel="noreferrer noopener nofollow" className="social-icon p-1">
                     <i className="fa fa-twitter"/>
                   </a>
-                  <a href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} className="social-icon p-1">
+                  <a href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} rel="noreferrer noopener nofollow" className="social-icon p-1">
                     <i className="fa fa-pinterest-p"/>
                   </a>
-                  <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} className="social-icon p-1">
+                  <a href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`${getWindowHost()}${location.pathname}`)}`} rel="noreferrer noopener nofollow" className="social-icon p-1">
                     <i className="fa fa-linkedin"/>
                   </a>
                 </div>

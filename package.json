@@ -26,12 +26,14 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "prismjs": "^1.15.0",
+    "react-lazyload": "^2.3.0",
     "swiper": "^4.3.3",
     "typed.js": "^2.0.8",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@pawjs/image-optimizer": "^0.8.7",
-    "@pawjs/pawjs": "^2.0.0"
+    "@pawjs/pawjs": "^2.0.0",
+    "@pawjs/sass": "^2.1.5"
   }
 }
