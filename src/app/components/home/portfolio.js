@@ -54,12 +54,10 @@ export default class Portfolio extends Component {
                               <Link to={portfolio.url} className="text-white text-capitalize">{portfolio.title}</Link>
                               <span className="text-primary d-block">by {portfolio.author.name}</span>
                               <div className={styles["item-link"]}>
-                                <a className="small-icon btn" href="images/portfolio/01.jpg">
-                                  <span className="d-none">Img</span>
+                                <a className={classNames(styles["small-icon"], "btn mr-1")} href="images/portfolio/01.jpg">
                                   <span className="ti-plus"/>
                                 </a>
-                                <Link className="small-icon btn" to={portfolio.url}>
-                                  <span className="d-none">Img url</span>
+                                <Link className={classNames(styles["small-icon"], "btn")} to={portfolio.url}>
                                   <span className="ti-link"/>
                                 </Link>
                               </div>

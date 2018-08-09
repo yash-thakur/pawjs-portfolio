@@ -481,8 +481,3 @@ template {
 [hidden] {
   display: none !important;
 }
-@include media-breakpoint-down(xs) {
-  html {
-    font-size: 16px;
-  }
-}

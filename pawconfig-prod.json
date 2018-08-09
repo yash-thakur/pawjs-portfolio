@@ -6,7 +6,7 @@
   "serviceWorker": true,
   "serverSideRender": true,
   "clientRootElementId": "app",
-  "asyncCSS": true,
+  "asyncCSS": false,
   "hstsEnabled": true,
   "hstsmaxAge": 31536000,
   "hstsIncludeSubDomains": true,
