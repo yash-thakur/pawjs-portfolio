@@ -12,7 +12,7 @@ export default class Server {
   
       gtag('config', 'UA-90331911-1');`}}/>);
       Application.htmlProps.head.push(
-        <script key="google_maps" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1z69MxzLu1V4vsP3ATKeogOSkA1op0FU&ver=4.9.4"/>
+        <script key="google_maps" async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1z69MxzLu1V4vsP3ATKeogOSkA1op0FU&ver=4.9.4"/>
       );
       return Application;
     })
