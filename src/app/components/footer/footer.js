@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import classNames from "classnames";
+import ReactDOM from "react-dom"
 
 import * as styles from "../home/home.scss";
-import {loadScript} from "../../utils/utils";
 import config from "../../../config";
 
 import BlueMarker from "./images/blue-marker.png";
@@ -10,17 +10,18 @@ import BlueMarker from "./images/blue-marker.png";
 export default class Footer extends Component {
   
   componentDidMount() {
-    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBhtR7n5LkRkbspO-WBtQue6jSBi26j03k&ver=4.9.4").then(() => this.initializeMap());
+    this.initializeMap();
   }
   
   componentWillReceiveProps() {
-    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBhtR7n5LkRkbspO-WBtQue6jSBi26j03k&ver=4.9.4").then(() => this.initializeMap());
+    this.initializeMap();
   }
   
   
   initializeMap() {
-    let myLatLng = new google.maps.LatLng(20.599046699073398,72.94154964409734);
-    let mapOptions = {
+    
+    let myLatLng=new google.maps.LatLng(20.599046699073398,72.94154964409734);
+    let mapOptions={
       zoom: 15,
       center: myLatLng,
       draggable: true,
@@ -28,20 +29,11 @@ export default class Footer extends Component {
       navigationControl: false,
       mapTypeControl: false,
       scaleControl: false,
-      styles: [
-        {"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},
-        {"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},
-        {"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},
-        {"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},
-        {"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
-        {"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":1}]},
-        {"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":-20}]},
-        {"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}
-      ]
+      styles: [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":1}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":-20}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
     };
-    let mapElement = document.getElementById("map-canvas");
-    let map = new google.maps.Map(mapElement, mapOptions);
-    let marker = new google.maps.Marker({
+    let mapElement=ReactDOM.findDOMNode(this.mapCanvas);
+    let map=new google.maps.Map(mapElement, mapOptions);
+    let marker=new google.maps.Marker({
       position: new google.maps.LatLng(20.599046699073398,72.94154964409734),
       map: map,
       icon: BlueMarker,
@@ -53,7 +45,7 @@ export default class Footer extends Component {
       <div className={styles["contact"]}>
         <div className={styles["contact-info"]}>
           <div id="google-map">
-            <div id="map-canvas" className=""/>
+            <div id="map-canvas" className={styles["map-canvas"]} ref={el => this.mapCanvas = el}/>
           </div>
           <div className={classNames(styles["contact-details"], "p-4 text-white")}>
             <h2 className="font-weight-normal my-4">Say Hi It’s Free!</h2>
