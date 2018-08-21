@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@pawjs/image-optimizer": "^0.8.7",
-    "@pawjs/pawjs": "^2.1.2",
+    "@pawjs/pawjs": "^2.1.4",
     "@pawjs/sass": "^2.1.5"
   }
 }

@@ -1,7 +1,8 @@
+import Home from "../app/components/home/home";
 export default [
   {
     path: "/",
     exact: true,
-    component: import("../app/components/home/home"),
+    component: Home,
   },
 ];
