@@ -29,6 +29,7 @@
     "react-lazyload": "^2.3.0",
     "swiper": "^4.4.6",
     "typed.js": "^2.0.8",
+    "universal-fetch": "^1.0.0",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
