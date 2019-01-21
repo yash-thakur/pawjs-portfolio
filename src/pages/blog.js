@@ -1,4 +1,5 @@
 import _ from "lodash";
+import React from "react";
 import blogList from "../app/components/blogs/blog-list";
 import BannerImg from "../resources/images/bg/01.jpg";
 import fetch from "universal-fetch";
@@ -52,7 +53,7 @@ export default [
   {
     path: "/blog/dynamic-seo/",
     exact: true,
-    component: import ("../app/components/blogs/arduino-working-accelerometer-led-lights"),
+    component: () => <div>Hello</div>,
     loadData: async ({updateSeo}) => new Promise((r) => {
       fetch('https://www.atyantik.com/wp-json/wp/v2/posts/?per_page=4&_fields[]=title&_fields[]=excerpt&_fields[]=jetpack_featured_media_url')
         .then(res => res.json())
