@@ -54,19 +54,16 @@ export default [
     exact: true,
     component: import ("../app/components/blogs/arduino-working-accelerometer-led-lights"),
     loadData: async ({updateSeo}) => new Promise((r) => {
-      setTimeout(() => {
-        fetch('https://www.atyantik.com/wp-json/wp/v2/posts/?per_page=4&_fields[]=title&_fields[]=excerpt&_fields[]=jetpack_featured_media_url')
-          .then(res => res.json())
-          .then(res => {
-            console.log(res);
-            const item = _.first(res);
-            updateSeo({
-              title: item.title.rendered,
-              image: item.jetpack_featured_media_url,
-            });
-            return r(res);
+      fetch('https://www.atyantik.com/wp-json/wp/v2/posts/?per_page=4&_fields[]=title&_fields[]=excerpt&_fields[]=jetpack_featured_media_url')
+        .then(res => res.json())
+        .then(res => {
+          const item = _.first(res);
+          updateSeo({
+            title: item.title.rendered,
+            image: item.jetpack_featured_media_url,
           });
-      }, 1000);
+          return r(res);
+        });
     }),
   }
 ];
