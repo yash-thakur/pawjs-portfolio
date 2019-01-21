@@ -27,13 +27,13 @@
     "classnames": "^2.2.6",
     "prismjs": "^1.15.0",
     "react-lazyload": "^2.3.0",
-    "swiper": "^4.3.3",
+    "swiper": "^4.4.6",
     "typed.js": "^2.0.8",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@pawjs/image-optimizer": "^0.8.7",
-    "@pawjs/pawjs": "^2.1.2",
-    "@pawjs/sass": "^2.1.5"
+    "@pawjs/pawjs": "^2.2.11",
+    "@pawjs/sass": "^2.1.7"
   }
 }
