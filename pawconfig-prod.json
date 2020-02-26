@@ -1,7 +1,7 @@
 {
   "port": "3007",
   "host": "0.0.0.0",
-  "cdnUrl": "https://cdn.yashthakur.in/",
+  "cdnUrl": "",
   "appRootUrl": "/",
   "serviceWorker": true,
   "serverSideRender": true,
